@@ -4,7 +4,8 @@ import requests
 import json
 import os
 
-def say(prompt, model="llama3"):
+def say(user_message, model="llama3"):
+    prompt = f'你是一个高级心理学咨询师，{user_message}。请用中文回答。'
     data = {
         "model": model,
         "prompt": prompt,
